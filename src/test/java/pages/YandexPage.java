@@ -1,4 +1,5 @@
-import static com.codeborne.selenide.Condition.enabled;
+package pages;
+
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverConditions.urlContaining;
@@ -16,9 +17,7 @@ public class YandexPage {
     }
 
     public YandexPage clickSearchButton() {
-        $("button[type='submit'], input[type='submit']")
-                .shouldBe(enabled)
-                .click();
+        $("[type='submit']").shouldBe(visible).click();
         return this;
     }
 
